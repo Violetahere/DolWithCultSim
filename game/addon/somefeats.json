@@ -1,0 +1,56 @@
+{
+    "AccessLib": {
+      title: "访问图书馆",
+      desc: "密教的秘密基地向你敞开",
+      difficulty: 1,
+      series: "",
+      filter: [
+        "All","Discoveries"
+      ],
+      hint: "虽然有没有许可都无所谓，但是后者有惊喜哦。"
+    },
+    "KRchat": {
+        title: "你确实闲，对吧？",
+        desc: "你听完了某退休女王对你情感关系的锐评，她自己都没觉得你真准备听的。",
+        difficulty: 3,
+        series: "",
+        filter: [
+          "All",
+          "Social"
+        ],
+        hint: "人上了年纪就喜欢碎碎念，长生者也逃不过这点。"
+      },
+    "GrailSecret": {
+        title: "二十六种诱惑与七类苦痛",
+        desc: "你听闻了杯之秘密，知晓了苦痛之理。",
+        difficulty: 1,
+        series: "",
+        hint: "苦痛才是它的真本性。",
+        filter: [
+          "All",
+          "Special"
+        ]
+      },
+    "Gunfromsomeone": {
+        title: "非法？持枪",
+        desc: "艾利尔给了你一把枪，那会是契科夫的枪吗？取决于你自己。",
+        difficulty: 1,
+        series: "",
+        filter: [
+          "All",
+          "Special"
+        ],
+        hint:"德州正星旗一向武德充沛。"
+      },
+      "StartofAcendent": {
+        title: "无形之术的起始",
+        desc: "恭喜你收集齐了九大准则，那不如一起来研究无形之术吧？",
+        difficulty: 4,
+        series: "",
+        filter: [
+          "All",
+          "Special"
+        ],
+        hint:"去收集宝可梦啊不对准则吧"
+      }
+}

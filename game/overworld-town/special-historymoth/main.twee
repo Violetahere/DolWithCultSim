@@ -1,0 +1,28 @@
+:: MystriousDecetive
+<<effects>>
+<<npc Covert>><<set $NPCName[$NPCNameList.indexOf("Covert")].init to 1>><<person1>>
+你向那个青年走近，注意到他的刘海遮住了右眼，而他露出的左眼看上去就像是一颗无机质的白水晶，而此刻这颗水晶正审视着你
+<<if $MeetingwiththeCultist is undefined>>
+    <<if crimeSumHistory() gte 5000>>
+        ，像是注意到了什么般，他微微睁大了眼睛，而后主动走向了你。
+        他伸手按住了你的肩膀，而后在你的耳边轻轻低语。
+        “你知道自己在这里有多少档案吗，居然还敢来警察局？”
+        <<link [[“我不知道你在说什么。”|CovertWillpower]]>><</link>><<willpowerdifficulty 1 600>><br>
+        <<link [[润|CovertAthletics]]>><</link>><br><br>
+    <<else>>
+        ，片刻后他露出一个微笑。
+        <<if crimeSumCurrent() gte 1000>>
+            “这不是小镇上正冉冉升起的犯罪新星吗？屈尊驾临这个小小的警局难道是想来炫耀自己的诡术能力的？”
+
+    <</if>>    
+<</if>>
+:: CovertWillpower
+<<if $willpowerSuccess is 1>>
+你绷住了自己的表情没有给他任何回应。
+<</if>>
+<<link [[“我不知道你在说什么。”|CovertWillpower]]>><</link>><<willpowerdifficulty 1 600>><br>
+:: CovertAthletics
+:: CovertCommiteCrime
+“如果我说我是来自首的，你又准备怎么办？”
+他听完你的话，捂着嘴大笑起来，但你却没有听到哪怕一丝气声。
+“我可不承接逮捕服务，亲爱的，我更像是顾问。”

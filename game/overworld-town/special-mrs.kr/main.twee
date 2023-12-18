@@ -1,0 +1,39 @@
+:: ForgeSign
+条件：同时拥有两个转化<br>
+<<link [[进入图书馆 (0:01)|townLibrary]]>><<pass 1>><</link>>
+
+:: Meeting at Museum
+<<npc Kinoshita>><<set $NPCName[$NPCNameList.indexOf("Kinoshita")].init to 1>><<set $NPCName[$NPCNameList.indexOf("Kinoshita")].love to 100>><<person1>>
+你转过头，一个有着柔顺棕黑色长卷发，扎着低马尾的女性微笑着看向你，即便被遮掩在半框眼镜后，她的眼睛看上去也仍然<span class="red">如血一般鲜红</span>。
+<<switch $bodysize>>
+		<<case 0>>相对于你的身材，她简直高的惊人。
+		<<case 1>>她比你高相当多。
+		<<case 2>>她相当高挑，起码胜过你许多。
+		<<case 3>>即使你已经比绝大部分人都高了，她仍然高过你半头。
+<</switch>><br>
+“你好啊，今天过得怎么样？开心吗？”<br>
+看到你转过头来，她挥了挥手对你致以问候
+<<if $fatigue gte 1000 or $stress gte 3000 or $trauma gte 2500 or $control lte 500>>
+    ，却在你彻底转过头的一刹那，紧紧皱起了眉头。<br>
+    “你看上去很糟糕，非常糟糕，你的身上发生什么事了？<span class="red">有什么我能帮忙的吗？</span><br>”
+    你隐约感觉自己好像恍惚了一下，莫大的委屈感突然涌上了你的心头，驱使着你将自己的苦痛与受难对着这个仅仅是初次见面的女性一倒而出，而随着你的每一句诉说，她的脸色都变得更加严肃，直到你一激灵回过神来，她长叹了一口气，表情看上去温和了许多。<br>
+    “……说真的，我一时间甚至找不出任何适合的语言来安慰你，但我知道你不该经历这些苦难，绝对不该。”<br>
+    她又长长的叹了一口气，赤红的眼睛中涵盖的是你几乎从未在这个小镇里见过的某种东西，同情，怜悯，还是……？<br>
+    你不明白，你无法理解，但本能的，你感到放松。<br>
+    “……我不能把你就这么丢在这里，这样很不好，非常不好。”<br>
+    她思考着，陷入沉默，而后一拍手。<br>
+    “你愿意相信我吗？”<br>
+    <<link [[点头|WaytoYSMT]]>><</link>><br>
+    <<link [[点头？|YSMT Bed]]>><</link>><br>
+<<else>>
+    。<br>
+    
+<</if>>
+    
+:: WaytoYSMT
+你点了点头，她露出微笑，向你伸出手。<br>
+“跟我走吧，我们去一个安全的地方。”<br>
+你搭上她的手，被拉着跑了起来。<br>
+<<link [[跟上她(0:01)|IntrobyKR-onStreet]]>><<pass 1>><</link>><br>
+
+

@@ -1,0 +1,50 @@
+:: MeetCarterSchoolLibrary
+<<effects>>
+<<npc Carter>><<set $NPCName[$NPCNameList.indexOf("Carter")].init to 1>><<person1>>
+
+<<if $MeetingwiththeCultist is undefined>>
+    “啊……你好啊，<<if $player.gender_appearance is "f">>小姐<<else>>先生<</if>>。”<br>
+    青年看着你，你注意到了他右眼的单片眼镜，他沉默了一会，而后向你露出一个温和的微笑。<br>
+    “我是迪伦，迪伦·卡特，我的朋友们都喜欢叫我迪伦，你也这么称呼我就好。”<br>
+    他看着你，金黄的虹膜令你产生了一种它仿佛在发光的感觉。<br>
+<<else>>
+    “啊，看上去你见过我的朋友们了？他们介绍过我了吗？还是没有？算了，这种事怎么样都无所谓。”<br>
+    右眼带着单片眼镜的青年微笑起来，
+    <<if $harpy gte 6 or $wolf gte 6 or $cat gte 6 or $cow gte 6 or $fox gte 6 >>/*有野兽转化前提*/
+        某种与兽类相似的直觉霎时间使你如芒在背，但你实在难以分辨这种感觉的来源。你面前的青年看上去明明温和而无害，那么危机又从何而来？<br>
+    <<else>>
+        不知为何你感到一丝心悸，但它下一秒就消逝了，快得如同一个错觉。<br>
+    <</if>>
+    “我是灯之长生者，迪伦·卡特，出于某些原因，现在被迫停留在这个醒时的世界。”<br>
+    他温和的，轻柔的，平缓的如此说道，那对金色的眼睛却明亮的令你心悸，你几乎产生了它在发光的错觉。<br>
+
+<</if>>
+    “那么，既然我做完了自我介绍，能请你告诉我你的名字吗？”<br>
+
+<<set $MeetCarter to 1>>
+<<link [[自我介绍|Carter AgreeforIntro]]>><</link>><br>
+<<link [[拒绝|Carter RefusetoIntro]]>><</link>><br>
+
+
+:: Carter AgreeforIntro
+<<effects>>
+<<npcincr Carter love 3>>
+<<npcincr Carter lust 30>>
+<<set $Carterromance to 1>>
+你告诉了迪伦自己的名字，他露出了一个满意的笑容。<br>
+“既然我们已经相互告知姓名，那你也是我的朋友了。”<br>
+他沉默了一瞬，而后打了个响指。<br>
+“牛津街上有座图书馆，你注意过吗？有，还是没有？”<br>
+他好像没有准备听你的回答，而是自顾自的往下说。<br>
+“我今天只是因为一时兴起，来这里找一些新奇的书本而已，这一次之后你八成就不会在这里见到我了。”<br>
+“<<if not ($MeetingwiththeCultist === undefined)>>虽然我不确定你还有没有继续和我们接触的胆子，但总之,<</if>>
+如果还想见我的话，去图书馆找我吧，我一直在。”<br>
+<<if $permiteForLib === undefined>>
+    <<set $permiteForLib to "Carter">>
+<</if>>
+<<if $MeetingwiththeCultist === undefined>>
+    <<set $MeetingwiththeCultist to "Lantern">>
+<</if>>
+他微微鞠了一躬，而后转身离开，<br>
+<<link [[继续|School Library]]>><</link>><<endevent>><br>
+:: Carter RefusetoIntro

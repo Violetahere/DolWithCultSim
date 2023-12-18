@@ -1,0 +1,15 @@
+				Museum Lock]]>><<pass 1>><</link>>
+				<br>
+			<</if>>
+		<</if>>
+		<<if $exposed lte 0>>
+			<<link [[镇级图书馆 (0:01)|townLibraryfront]]>><<pass 1>><</link>>
+			<br>
+		<<else>>
+			<<if Time.hour gte 7 and Time.hour lte 7>>
+			<<link [[镇级图书馆 (0:01)|townLibraryfront]]>><<pass 1>><</link>>
+			
+				
+		
+
+

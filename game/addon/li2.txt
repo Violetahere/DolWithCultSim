@@ -1,0 +1,7 @@
+<<if $Carterromance is 1>>
+    <<run _potentialLoveInterests.push("Carter")>>
+<</if>>
+<<if $Covertromance is 1>>
+    <<run _potentialLoveInterests.push("Covert")>>
+<</if>>    
+<<if _potentialLoveInterests.length lte 1>>

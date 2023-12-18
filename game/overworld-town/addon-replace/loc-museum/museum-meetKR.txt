@@ -1,0 +1,11 @@
+Museum]]>><<endevent>><</link>><br>
+<<if $krseen is undefined>>
+“诶呀，这地方看上去不错嘛。
+    <<if $museumAntiques.museumCount gt $museumAntiques.maxCount / 1.5>>
+        这些古董是你收集的吗？看上去保养的都不错嘛。”<br>
+    <<else>>
+        虽然好像还空了点，但缺憾也是一种美嘛。”<br>
+    <</if>>
+从你的背后响起一个温和的女声，她说完这句话后就没有再发声，或许是在等待你的回应。<br>
+<<link [[转头看看|Meeting at Museum]]>><</link>>
+<</if>>

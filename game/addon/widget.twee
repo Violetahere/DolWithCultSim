@@ -1,0 +1,4 @@
+::  widgetshere [widget]
+<<widget "KinoshitaOpinion">>
+<<=lanSwitch("worrys you.", '很担心你。')>>
+<</widget>>

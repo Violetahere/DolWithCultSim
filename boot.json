@@ -1,0 +1,105 @@
+{
+    "name": "Dol with CultistSim",    
+    "version": "1.0.0", 
+    "styleFileList": [
+    ],
+    "scriptFileList": [
+      "newNPC.js"
+    ],
+    "tweeFileList": [
+        "game/overworld-town/loc-townlib/main.twee",
+        "game/overworld-town/special-ariel/main.twee",
+        "game/overworld-town/special-laplace/main.twee",
+        "game/overworld-town/special-mrs.kr/main.twee",
+        "game/overworld-town/special-mrs.kr/home.twee",
+        "game/overworld-town/special-lantern/main.twee",
+        "game/addon/widget.twee"
+    ],
+    "imgFileList": [
+    ],
+    "additionFile": [
+        "game/overworld-town/addon-replace/loc-street/oxfordstreet-townlib.txt",
+        "game/addon/somefeats.json",
+        "game/overworld-town/addon-replace/loc-museum/museum-meetKR.txt",
+        "game/overworld-town/addon-replace/loc-library/lib-meetCarter.txt",
+        "game/overworld-town/addon-replace/sleep/addplace-KR.txt",
+        "game/overworld-town/addon-replace/loc-police.txt",
+        "game/addon/loveinterest.txt",
+        "game/addon/li2.txt"
+    ],
+    "additionBinaryFile": [
+    ],
+    "additionDir": [
+    ],
+    "addonPlugin": [
+    {
+        "modName": "TweeReplacer",
+        "addonName": "TweeReplacerAddon",
+        "modVersion": "1.2.0",
+        "params": [
+            {
+                "passage": "Oxford Street",
+                "findString": "Museum Lock]]>><<pass 1>><</link>>",
+                "replaceFile": "game/overworld-town/addon-replace/loc-street/oxfordstreet-townlib.txt"
+            },
+              {
+                "passage": "Museum Look around",
+                "findString": "Museum]]>><<endevent>><</link>>",
+                "replaceFile": "game/overworld-town/addon-replace/loc-museum/museum-meetKR.txt"
+              },
+            {
+                "passage": "School Library",
+                "findString": "Library Study]]>><<pass 20>><<set $phase to 4>><</link>><<ghistory>>",
+                "replaceFile": "game/overworld-town/addon-replace/loc-library/lib-meetCarter.txt"
+            },
+            {
+                "passage": "Widgets Sleep",
+                "findString": "<<case \"island\">>",
+                "replaceFile": "game/overworld-town/addon-replace/sleep/addplace-KR.txt"
+          },
+          {
+              "passage": "Police Station",
+              "findString": "Police Leighton]]>><</link>>",
+              "replaceFile": "game/overworld-town/addon-replace/loc-police.txt"
+          },
+          {
+              "passage": "Widgets Attitudes",
+              "findString": ",\"Great Hawk\",\"Alex\"",
+              "replaceFile": "game/addon/loveinterest.txt"
+          },
+          {
+              "passage": "Widgets Attitudes",
+              "findString": "<<if _potentialLoveInterests.length lte 1>>",
+              "replaceFile": "game/addon/li2.txt"
+          }
+            
+              
+        ]
+    },
+    {
+        "modName": "ModdedFeatsAddon",
+        "addonName": "ModdedFeatsAddon",
+        "modVersion": "^1.0.0",
+        "params": {
+          "feats": [
+            "game/addon/somefeats.json"
+          ]
+        }
+      }
+    ],
+    "dependenceInfo": [
+    {
+        "modName": "TweeReplacer",
+        "version": "^1.2.0"
+      },
+    {
+        "modName": "ModdedFeatsAddon",
+        "version": "^1.0.0"
+    }
+    ,
+    {
+      "modName": "ReplacePatcher",
+      "version": "^1.0.0"
+    }
+    ]
+  }

@@ -1,0 +1,9 @@
+Library Study]]>><<pass 20>><<set $phase to 4>><</link>><<ghistory>>
+<br>
+		<</if>>
+<<if $MeetCarter is undefined>>
+	你看见一个从未见过的人，一个有着明亮金色长发，扎着高马尾的青年，他在书架间穿梭着，时不时伸手拿下一本书翻看。<br>
+	<<if not ($MeetingwiththeCultist === undefined)>>
+		你想起听到的关于灯之修行者的描述，似乎与面前这个男人并无二致。<br>
+		<</if>>
+	<<link [[和他搭话|MeetCarterSchoolLibrary]]>><</link>><br>

@@ -1,0 +1,32 @@
+:: townLibraryfront
+<<set $outside to 0>><<set $location to "townLibrary">><<effects>>
+/*如果没见过艾利尔且无其他人的认证，则强制进入艾利尔初遇事件*/
+<<if$ATseen is undefined>>
+    你走进图书馆，第一个映入你眼帘的就是占据了大半个房间的柜台，显示器遮住了可能存在的图书管理员的身影，你只能从键盘敲击声意识到这里还有除了你以外的人。<br>
+    <<if$permiteForLib is undefined>>
+        <<link [[靠近柜台|MeetAT Notpermitted]]>><</link>><br><br>
+    <<else>>
+        <<link [[靠近柜台|MeetAT withpermit]]>><</link>><br><br>
+    <</if>>
+    房间的右侧有一扇门，考虑到它是这里唯二的门，想必是图书馆的入口吧。<br>
+    <<link [[靠近那扇门|Frontdoorlocked]]>><</link>><br>
+<<else>>
+    “来了？进去吧。”<br>
+    艾利尔听见你的脚步声，头都没抬。<br>
+    <<link [[进入图书馆 (0:01)|townLibrary]]>><<pass 1>><</link>><br>
+    
+<</if>>
+<<link [[离开 (0:01)|Oxford Street]]>><<pass 1>><</link>>
+
+:: Frontdoorlocked
+你走向房间右侧的那扇门，尝试着压下把手，但它纹丝不动，你又尝试了一次，然后确定它锁上了。<br>
+<<link [[靠近柜台|MeetAT Notpermitted]]>><</link>><br>
+<<link [[离开 (0:01)|Oxford Street]]>><<pass 1>><</link>>
+
+:: townLibrary
+你走进图书馆。
+<<if $MeetCarter is 1>>
+迪伦正坐在背后有一个提灯模样标志的椅子上，捧着一本书阅读。
+<</if>>
+<<link [[离开 (0:01)|Oxford Street]]>><<pass 1>><</link>>
+

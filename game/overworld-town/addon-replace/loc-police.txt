@@ -1,0 +1,9 @@
+    Police Leighton]]>><</link>>
+	<br>
+<</if>>
+<<if $MeetCovert is undefined>>
+    你看见一个粉发的男子正靠在墙上，举着个怀表在那里一晃一晃的。<br>
+    <<if not ($MeetingwiththeCultist === undefined)>>
+		你想起被称为“漫游之人”的存在，或许就是他？<br>
+    <</if>>
+	<<link [[向他靠近|MystriousDecetive]]>><</link>><br>
